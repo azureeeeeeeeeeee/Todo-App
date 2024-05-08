@@ -25,7 +25,9 @@ SECRET_KEY = 'j4t(zkvp+!k^r2)0+g&+185658bqf8_oalltl&p$4*@1kc+urt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'todo-app-self.onrender.com'
+]
 
 
 # Application definition
