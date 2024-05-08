@@ -1,0 +1,30 @@
+{% extends 'index.html' %} {% block content %}
+<div class="navbar">
+  <h1>Hi @{{user.username}}</h1>
+  <form action="" method="GET">
+    <input type="text" name="q" placeholder="Search a todo" />
+  </form>
+  <a href="{% url 'add-item' %}"><button>+ ADD TODO</button></a>
+</div>
+<hr />
+<div class="main-todo">
+  {% include 'base/item.html' %}
+  <!-- <div class="todo-list">
+    <h2><strong>Membunuh teman</strong></h2>
+    <div class="todo-button">
+      <a href=""><button>DONE</button></a>
+      <a href=""><button>FAILED</button></a>
+      <a href=""><button>EDIT</button></a>
+    </div>
+  </div> -->
+
+  <!-- <div class="todo-list">
+    <h2><strong>Membantu nenek menyebrang jalan</strong></h2>
+    <div class="todo-button">
+      <a href=""><button>DONE</button></a>
+      <a href=""><button>FAILED</button></a>
+      <a href=""><button>EDIT</button></a>
+    </div>
+  </div> -->
+</div>
+{% endblock %}

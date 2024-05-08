@@ -1,0 +1,41 @@
+.main-todo {
+  display: flex;
+  flex-direction: column;
+  /* gap: 5px; */
+  margin-top: 50px;
+}
+
+.todo-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+
+.todo-list button {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.done-btn {
+  background-color: greenyellow;
+}
+
+.fail-btn {
+  background-color: red;
+}
+
+.item-button {
+  display: flex;
+  gap: 20px;
+}
+
+.item-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

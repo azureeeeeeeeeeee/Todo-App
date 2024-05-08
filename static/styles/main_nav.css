@@ -1,0 +1,13 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar form input {
+  padding: 10px;
+}
+
+.navbar button {
+  padding: 10px;
+}

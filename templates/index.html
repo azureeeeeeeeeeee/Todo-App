@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoIT | Be Productive</title>
+
+    <link rel="stylesheet" href="{% static 'styles/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main_nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/todo.css' %}" />
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    <main>{% block content %} {% endblock %}</main>
+  </body>
+</html>

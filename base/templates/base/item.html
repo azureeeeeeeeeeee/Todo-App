@@ -1,0 +1,13 @@
+{% for item in todo %}
+<div class="todo-list">
+  <h2><strong>{{item.name}}</strong></h2>
+  <div class="item-left">
+    <div class="date">Deadline : <strong>{{item.deadline}}</strong></div>
+    <div class="item-button">
+      <a href=""><button class="done-btn">DONE</button></a>
+      <a href=""><button class="fail-btn">FAILED</button></a>
+      <a href=""><button class="edit-btn">EDIT</button></a>
+    </div>
+  </div>
+</div>
+{% endfor %}
