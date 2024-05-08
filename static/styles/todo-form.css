@@ -1,0 +1,23 @@
+.add-item form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 200px;
+}
+
+.add-item label {
+  margin-top: 20px;
+}
+
+.add-item input {
+  padding: 10px;
+}
+
+.add-item .submit-btn {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.add-item h1 {
+  align-self: center;
+}

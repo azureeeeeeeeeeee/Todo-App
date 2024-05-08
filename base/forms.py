@@ -6,4 +6,4 @@ class TodoForm(ModelForm):
     class Meta:
         model = todoList
         fields = '__all__'
-        exclude = ['user', 'done']
+        exclude = ['user', 'status']

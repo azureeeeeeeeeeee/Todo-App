@@ -11,8 +11,7 @@ def home(request):
     context = {'user': user, 'todo': todo}
     return render(request, 'base/home.html', context)
 
-def CreateTodo(request):
-
+def createTodo(request):
     if request.method == 'POST':
         form = TodoForm(request.POST)
         if form.is_valid():
@@ -26,3 +25,6 @@ def CreateTodo(request):
         form = TodoForm()
     context = {'form':form}
     return render(request, 'base/todo_form.html', context)
+
+def deleteTodo(request, pk):
+    pass

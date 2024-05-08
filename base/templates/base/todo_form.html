@@ -1,10 +1,31 @@
 {% extends 'index.html' %} {% block content %}
 
-<div>
+<div class="add-item">
+  <h1 style="align-self: center">Add Todo | Be Productive</h1>
+  <hr />
   <form action="" method="POST">
-    {% csrf_token %} {{form.as_p}}
+    {% csrf_token %}
+    <!-- {{form.as_p}} -->
+    <label for="">Todo item</label>
+    {{form.name}}
 
-    <input type="submit" value="Submit" />
+    <label for="">Description</label>
+    {{form.description}}
+
+    <label for="">Deadline (YYYY-MM-DD)</label>
+    {{form.deadline}}
+    <!-- <input type="text" name="name" value="{{item.name}}" placeholder="Enter Todo item" /> -->
+
+    <!-- <label for="">Todo Item</label>
+    <input type="text" name="" placeholder="Enter Todo item" />
+
+    <label for="">Description</label>
+    <input type="text" name="" placeholder="Enter Todo item" />
+
+    <label for="">Deadline</label>
+    <input type="text" name="" placeholder="Enter deadline (YYYY-MM-DD)" /> -->
+
+    <input class="submit-btn" type="submit" value="Submit" />
   </form>
 </div>
 
