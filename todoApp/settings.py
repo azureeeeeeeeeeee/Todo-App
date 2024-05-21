@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +27,8 @@ SECRET_KEY = 'j4t(zkvp+!k^r2)0+g&+185658bqf8_oalltl&p$4*@1kc+urt'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'todo-app-self.onrender.com'
+    'todo-app-self.onrender.com',
+    '127.0.0.1'
 ]
 
 
@@ -79,12 +81,28 @@ WSGI_APPLICATION = 'todoApp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+# DATABASES['default'] = dj_database_url.parse("postgres://todo_list_app_user:wjrExphJkK4m5f3NsNt7gMN5zUKjF0wz@dpg-cp6dp0o21fec738glugg-a.oregon-postgres.render.com/todo_list_app")
+
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'todo_list_app',
+        'USER': 'todo_list_app_user',
+        'PASSWORD': 'wjrExphJkK4m5f3NsNt7gMN5zUKjF0wz',
+        'HOST': 'dpg-cp6dp0o21fec738glugg-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation

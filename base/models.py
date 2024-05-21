@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 # Create your models here.
 class todoList(models.Model):
@@ -8,8 +9,8 @@ class todoList(models.Model):
     description = models.TextField(max_length=400, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     deadline = models.DateField(null=True, default=None)
-    # done = models.BooleanField(default=False)
     status = models.CharField(max_length=10, default='Ongoing')
+    done = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ['deadline', 'created']

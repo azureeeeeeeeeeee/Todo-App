@@ -1,0 +1,17 @@
+{% include 'index.html' %} {% block content %}
+
+<h2>DoIT | Be Productive</h2>
+<hr />
+
+<form action="" method="POST">
+  {% csrf_token %} {% for field in form %}
+  <div class="form-fields">
+    <label for="">{{field.label}}</label>
+    {{field}}
+  </div>
+  {% endfor %}
+
+  <input type="submit" value="REGISTER" />
+</form>
+
+{% endblock %}

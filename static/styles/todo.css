@@ -39,3 +39,7 @@
   flex-direction: column;
   gap: 10px;
 }
+
+.todo-list a {
+  color: black;
+}

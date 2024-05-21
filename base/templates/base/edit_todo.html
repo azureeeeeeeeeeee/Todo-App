@@ -1,0 +1,19 @@
+{% extends 'index.html' %} {% block content %}
+
+<div class="edit-item">
+  <form action="" method="POST">
+    {% csrf_token %}
+    <label for="">Todo item</label>
+    <input type="text" name="name" value="{{todo.name}}" />
+
+    <label for="">Description</label>
+    <input type="text" name="description" value="{{todo.description}}" />
+
+    <label for="">Dedaline (YYYY-MM-DD)</label>
+    <input type="text" name="deadline" value="{{todo.deadline}}" />
+
+    <input class="submit-btn" type="submit" value="Update Task" />
+  </form>
+</div>
+
+{% endblock %}

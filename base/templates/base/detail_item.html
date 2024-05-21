@@ -1,0 +1,27 @@
+{% include 'index.html' %} {% block content %}
+<div class="task-detail">
+  <h1>Task : <strong>{{todo.name}}</strong></h1>
+  <h3><strong>{{todo.deadline}}</strong></h3>
+
+  <hr />
+  {% if todo.status == 'Failed' %}
+  <p>Status : <span style="color: red">Failed</span></p>
+  {% elif todo.status == 'Success' %}
+  <p>Status : <span style="color: green">Success</span></p>
+  {% else %}
+  <p>Status : <span>Ongoing</span></p>
+  {% endif %} {% if todo.description %}
+  <p>{{todo.description}}</p>
+  {% else %}
+  <p>No Description yet :emot_nangis:</p>
+  {% endif %}
+  <div class="detail-buttons">
+    <a href="{% url 'edit-task' todo.id %}"
+      ><button class="btn">EDIT</button></a
+    >
+    <a href="{% url 'delete-task' todo.id %}"
+      ><button class="fail-btn btn">DELETE</button></a
+    >
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% include 'index.html' %} {% block content %}
+
+<h2>DoIT | Be Productive</h2>
+<hr />
+
+<form action="" method="POST">
+  {% csrf_token %}
+
+  <div class="form-fields">
+    <label for="">Username</label>
+    <input
+      id="username"
+      name="username"
+      type="text"
+      placeholder="e.g. user123"
+    />
+  </div>
+
+  <div class="form-fields">
+    <label for="">Password</label>
+    <input
+      id="password"
+      name="password"
+      type="password"
+      placeholder="********"
+    />
+  </div>
+  <input type="submit" value="LOGIN" />
+</form>
+
+{% endblock %}
