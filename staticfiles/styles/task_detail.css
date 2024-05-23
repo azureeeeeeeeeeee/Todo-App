@@ -1,0 +1,14 @@
+.task-detail {
+  margin: 50px 400px;
+}
+
+.detail-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.detail-buttons button {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}

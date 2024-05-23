@@ -1,0 +1,23 @@
+.edit-item form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 200px;
+}
+
+.edit-item label {
+  margin-top: 20px;
+}
+
+.edit-item input {
+  padding: 10px;
+}
+
+.edit-item .submit-btn {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.edit-item h1 {
+  align-self: center;
+}
